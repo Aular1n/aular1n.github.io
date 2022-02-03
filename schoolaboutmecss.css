@@ -1,0 +1,26 @@
+body {
+	background-image: url(pinkrose.jpg);
+	background-size: cover;
+}
+
+
+h1 {
+	text-align: center;
+	margin-top: 175px;
+
+}
+
+h2 {
+	margin-left: 375px;
+	margin-top: 0px;
+	text-align: center;
+	font-style: italic;
+	border: solid 2px;
+	padding: 5px 10px;
+	display: inline-block;
+	font-size: 150%;
+	line-height: 35px;
+	font-family: 'Spline Sans', sans-serif;
+
+}
+
