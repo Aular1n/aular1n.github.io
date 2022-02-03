@@ -1,0 +1,249 @@
+
+
+:root {
+  --bg-color: hsl(49 37% 94%);
+  --typewriterSpeed: 6s;
+  --typewriterCharacters: 24;
+}
+
+body {
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  background: var(--bg-color);
+}
+
+h1 {
+  margin-top: -10px;
+  background: lightcoral;
+  font-size: clamp(1rem, 3vw + 1rem, 4rem);
+  position: relative;
+  font-family: "Source Code Pro", monospace;
+  position: relative;
+  width: max-content;
+}
+
+h1::before,
+h1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0px;
+  left: 0;
+}
+
+h1::before {
+  background: lightcoral;
+  animation: typewriter var(--typewriterSpeed)
+    steps(var(--typewriterCharacters)) 1s forwards;
+}
+
+h1::after {
+  width: 0.125em;
+  background: black;
+  animation: typewriter var(--typewriterSpeed)
+      steps(var(--typewriterCharacters)) 1s forwards,
+    blink 750ms steps(var(--typewriterCharacters)) infinite;
+}
+
+.subtitle {
+  margin-top: 350px;
+  color: hsl(0 0% 0% / 0.7);
+  font-size: 2rem;
+  font-weight: 400;
+  opacity: 0;
+  transform: translateY(3rem);
+  animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#yt-link {
+  position: absolute;
+  bottom: 2em;
+  width: 100%;
+  color: hsl(0 0 0 / 0.7);
+
+  &:hover,
+  &:focus {
+    color: lightcoral;
+  }
+}
+
+body {
+  background-color: lightcoral;
+}
+
+.face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 150px;
+  margin: auto;
+  height: 40px;
+  width: 65px;
+  background: black;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  animation: head 1s linear infinite
+}
+.head {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 150px;
+  margin: auto;
+  height: 65px;
+  width: 80px;
+  background: white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  animation: head 1s linear infinite;
+}
+@keyframes head{
+  0%{
+    transform: translateY(0px) rotatez(0deg);
+  }
+  50%{
+    transform: translateY(0px) rotatez(7deg);
+  }
+  100%{
+    transform: translateY(0px) rotatez(0deg);
+  }
+}
+.leftarm {
+position: absolute;
+top: 0;
+left: 0;
+right: 230px;
+bottom: 25px;
+margin: auto;
+height: 30px;
+width: 100px;
+background: black;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 50px;
+border-bottom-right-radius: 10px;
+animation: hand 1s linear infinite;
+}
+
+@keyframes hand{
+  0%{
+    transform: translateY(-40px) rotateZ(45deg);
+  }
+  50%{
+    transform: translateY(0px) rotateZ(-0deg);
+  }
+  100%{
+    transform: translateY(-40px) rotateZ(45deg);
+  }
+}
+
+.rightarm {
+  position: absolute;
+  top: 50px;
+  left: 165px;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  height: 30px;
+  width: 100px;
+  background: black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 50px;
+  transform: rotateZ(80deg);
+  animation: body 1s linear infinite;
+}
+@keyframes body{
+  0%{
+    transform: translateY(0px) rotatez(80deg);
+  }
+  50%{
+    transform: translateY(0px) rotatez(78.5deg);
+  }
+  100%{
+    transform: translateY(0px) rotatez(80deg);
+  }
+}
+
+.lefteye {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 25px;
+  bottom: 150px;
+  margin: auto;
+  background: repeating-linear-gradient(blue 70%, #002966 80%, blue);
+  height: 10px;
+  width: 15px;
+  border-top-left-radius:50px;
+  border-top-right-radius:50px;
+  border-bottom-left-radius:20px;
+  border-bottom-right-radius:20px;
+  animation: head 1s linear infinite
+}
+
+.righteye{
+  position: absolute;
+  top: 0;
+  left: 25px;
+  right: 0;
+  bottom: 150px;
+  margin: auto;
+  background: repeating-linear-gradient(white 70%, red 80%, gold);
+  height: 10px;
+  width: 15px;
+  border-top-left-radius:50px;
+  border-top-right-radius:50px;
+  border-bottom-left-radius:20px;
+  border-bottom-right-radius:20px;
+  animation: head 1s linear infinite
+
+}
+
+.body {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  margin: auto;
+  height: 120px;
+  width: 115px;
+  background: white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+
